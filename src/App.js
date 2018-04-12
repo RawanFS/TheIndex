@@ -12,6 +12,7 @@ import BookList from './BookList';
 
 function App(props) {
   const authorStore = props.authorStore;
+  const bookStore = props.bookStore;
   return (
     <div id="app" className="container-fluid">
       <div className="row">
@@ -19,7 +20,7 @@ function App(props) {
           <Sidebar />
         </div>
         <div className="content col-10">
-          {authorStore.loading ?
+          {(authorStore.loading || bookStore.loading) ?
             <Loading /> :
             <Switch>
               <Route exact path='/' render={() => <Redirect to='/authors'/>}/>
@@ -31,11 +32,11 @@ function App(props) {
                      }/>
               <Route path='/books/:bookColor'
                      render={
-                       props => <BookList {...props} />
+                       props => <BookList {...props} bookStore={bookStore}/>
                      }/>
               <Route path='/books/'
                      render={
-                       props => <BookList {...props} />
+                       props => <BookList {...props} bookStore={bookStore}/>
                      }/>
             </Switch>}
           </div>
