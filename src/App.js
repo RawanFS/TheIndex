@@ -25,7 +25,12 @@ function App(props) {
             <Switch>
               <Route exact path='/' render={() => <Redirect to='/authors'/>}/>
               <Route path='/authors/:authorID'
-                     render={props => <AuthorDetail {...props} />}/>
+                     render={
+                       props =>
+                        <AuthorDetail {...props}
+                          authorStore={authorStore}
+                          bookStore={bookStore}/>
+                     }/>
               <Route path='/authors/'
                      render={
                        props => <AuthorsList {...props} authorStore={authorStore}/>
