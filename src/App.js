@@ -10,6 +10,7 @@ let auth = {
   authImg: "https://nation.com.pk/digital_images/large/2015-05-10/jk-rowling-believes-in-standing-up-to-bullies-1431261222-3596.jpeg",
 };    
 
+
 class App extends Component {
   render() {
     return (
@@ -51,7 +52,7 @@ class App extends Component {
         <CardBody>
           <CardTitle>{auth.authName}</CardTitle>
           <CardSubtitle></CardSubtitle>
-          <CardText>{auth.authBooks}}</CardText>
+          <CardText>{auth.authBooks}</CardText>
         </CardBody>
       </Card>
     </div>

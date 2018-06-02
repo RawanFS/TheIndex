@@ -1,15 +1,11 @@
 
-let auth = {
-  authName: ["J.K.","George R.R.",],
-  authBooks: "weird",
-  authImg: ""
-}; 
+
 
 
 
 const authors = [
   {
-    first_name: auth.authName,
+    first_name: "J.K.",
     last_name: "Rowling",
     imageUrl: "https://nation.com.pk/digital_images/large/2015-05-10/jk-rowling-believes-in-standing-up-to-bullies-1431261222-3596.jpeg",
     books: [
