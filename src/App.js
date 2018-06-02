@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import Sidebar from 'react-sidebar';
 
+import authors  from './data';
 
-
-
-
-
-
-
+let auth = {
+  authName: "J.K. Rowling",
+  authBooks: "7 Books",
+  authImg: "https://nation.com.pk/digital_images/large/2015-05-10/jk-rowling-believes-in-standing-up-to-bullies-1431261222-3596.jpeg",
+};    
 
 class App extends Component {
   render() {
@@ -18,6 +18,16 @@ class App extends Component {
   <div id="app" class="container-fluid">
     <div class="row">
 
+{/* <div class="col-2">
+<Sidebar>
+<img src="theindex.svg" class="logo" />
+          <section>
+            <h4 class="menu-item active">
+              <a href="#">AUTHORS</a>
+            </h4>
+          </section>
+</Sidebar>
+</div> */}
 
   <div class="col-2">
         <sidebar>
@@ -36,15 +46,18 @@ class App extends Component {
           <div class="row">
 
     <div class="col-4">
-      <Card>
-        <CardImg top width="100%" src="https://nation.com.pk/digital_images/large/2015-05-10/jk-rowling-believes-in-standing-up-to-bullies-1431261222-3596.jpeg" alt="Card image cap" />
+      <Card class="col-4">
+        <CardImg top width="100%" src={auth.authImg} alt="Card image cap" />
         <CardBody>
-          <CardTitle>J.K. Rowling</CardTitle>
+          <CardTitle>{auth.authName}</CardTitle>
           <CardSubtitle></CardSubtitle>
-          <CardText>7 books</CardText>
+          <CardText>{auth.authBooks}}</CardText>
         </CardBody>
       </Card>
     </div>
+
+
+
 
     <div class="col-4">
       <Card>
